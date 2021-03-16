@@ -45,8 +45,8 @@ goto :EOF
 
 :options
   set GDAL_CACHEMAX=2048
-  set _opt=-co num_threads=all_cpus -co bigtiff=yes -co compress=packbits ^
-    -co tiled=yes
+  set _opt=-co num_threads=all_cpus -co bigtiff=yes -co compress=zstd ^
+    -co level=17 -co predictor=yes -co tiled=yes
   goto :eof
   
 :timeit
