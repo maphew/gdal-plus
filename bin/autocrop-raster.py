@@ -5,6 +5,11 @@ Caveats:
     At the moment "nodata" is any value below 1 (data is greater than 0).
     And only single band images are handled.
 
+    This scanline approach is only suitable for images with nodata 
+    "collars". If your data are islands in seas of nulls, the space 
+    between islands will get dropped as well, squishing everything 
+    together and totally messing up the georeferencing.
+
 Matt.Wilkie@gov.yk.ca, 2015-Jun-02
 License: X/MIT, (c) 2015 Environment Yukon
 '''
