@@ -33,6 +33,7 @@
   @goto :eof
 
 :replace
+  @for %%a in (*.diff) do findstr /i "pixel" "%%a"
   @echo. =================================================================
   @echo. --- If there are no reports of pixel differences above you may within "%1":
   @echo.     move *.diff orig\
